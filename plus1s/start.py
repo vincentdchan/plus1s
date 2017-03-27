@@ -1,8 +1,11 @@
 from PIL import Image
 from xtermcolor import colorize
 from os import listdir
-from os.path import isfile, join
+from os.path import isfile, join, dirname
 import random
+
+IMAGE_PATH = join(dirname(__file__), 'resources/images')
+SENTENCES_PATH = join(dirname(__file__), 'resources/sentences.txt')
 
 
 def tuple_to_color_hex(tup):
@@ -17,8 +20,16 @@ def pick_filename(path):
     return random.choice([join(path, f) for f in listdir(path) if isfile(join(path, f))])
 
 
-if __name__ == '__main__':
-    im = Image.open(pick_filename('resources/images/'))
+def pick_sentence():
+    sentences = []
+    with open(SENTENCES_PATH, 'r') as f:
+        lines = f.readlines()
+        sentences = [line.strip() for line in lines if len(line) != 0]
+    return random.choice(sentences) + '...'
+
+
+def start():
+    im = Image.open(pick_filename(IMAGE_PATH))
     im = im.convert('RGB')
     px = im.load()
     width, height = im.size
@@ -27,3 +38,5 @@ if __name__ == '__main__':
             print(colorize('  ', rgb=tuple_to_color_hex(inverse(px[w, h])), 
                 bg=tuple_to_color_hex(px[w, h])), end='')
         print()
+
+    print(pick_sentence())

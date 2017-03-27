@@ -1,5 +1,6 @@
-/bin
-/include
-/lib
 
 /.idea
+/virt_env
+__pycache__
+
+/build
