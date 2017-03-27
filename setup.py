@@ -9,16 +9,9 @@ setup(name='plus1s',
       packages = ['plus1s'],
       # py_modules=['plus1s'],
       scripts=['bin/plus1s'],
-      install_requires=[
-            'appdirs==1.4.3',
-            'olefile==0.44',
-            'packaging==16.8',
-            'Pillow==4.0.0',
-            'pyparsing==2.2.0',
-            'six==1.10.0',
-            'xtermcolor==1.3',
-      ],
       package_data={
             'plus1s': ['resources/*.txt', 'resources/images/*.jpg']
       },
+      url='https://github.com/ChannelOne/plus1s',
+      license='LGPL-3.0',
       )
