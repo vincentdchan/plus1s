@@ -2,7 +2,7 @@
 from setuptools import setup
 
 setup(name='plus1s',
-      version='1.1.1',
+      version='1.1.3',
       description='Are you a real fans?',
       author='DZ Chan',
       author_email='cdzos97@gmail.com',

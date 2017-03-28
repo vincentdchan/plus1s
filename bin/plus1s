@@ -7,6 +7,8 @@ import argparse
 
 DESP = '''
 Are you a real fans?
+
+Type plus1s -h to see the help.
 '''
 
 EVAL_MSG = '''
@@ -14,7 +16,7 @@ EVAL_MSG = '''
 
 function plus1s_check {
     if [[ $? -ne 0 ]]; then
-        plus1s -f
+        plus1s -a
     fi
 }
 
@@ -28,17 +30,17 @@ alias gou='echo 苟利国家生死以，岂因祸福避趋之'
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(DESP)
-    parser.add_argument('-s', '--startup', action='store_true',
-                        help='Show the message at the start of the shell.')
-    parser.add_argument('-f', '--failure', action='store_true',
-                        help='Show the message after the failure of executing command.')
+    parser.add_argument('-s', '--sentence', action='store_true',
+                        help='Show a sentence of him, with a picture.')
+    parser.add_argument('-a', '--alert', action='store_true',
+                        help='Show an alert of him.')
     parser.add_argument('-e', '--eval', action='store_true',
                         help='Show the eval message.')
     args = parser.parse_args(sys.argv[1:])
 
-    if args.startup:
+    if args.sentence:
         plus1s.start()
-    elif args.failure:
+    elif args.alert:
         plus1s.show_error_message()
     elif args.eval:
         print(EVAL_MSG)

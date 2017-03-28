@@ -16,6 +16,27 @@
 ## Usage:
 
 ```
+➜  ✗ plus1s -h
+
+
+usage:
+Are you a real fans?
+
+Type plus1s -h to see the help.
+
+       [-h] [-s] [-a] [-e]
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -s, --sentence  Show a sentence of him, with a picture.
+  -a, --alert     Show an alert of him.
+  -e, --eval      Show the eval message.
+
+```
+
+Or type the command without parameter to devote a second.
+
+```
 ➜  ~ plus1s
 You have devoted 1 second for him successfully!
 
