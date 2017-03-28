@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='plus1s',
-      version='1.1',
+      version='1.1.1',
       description='Are you a real fans?',
       author='DZ Chan',
       author_email='cdzos97@gmail.com',
@@ -12,6 +12,10 @@ setup(name='plus1s',
       package_data={
             'plus1s': ['resources/*.txt', 'resources/images/*.jpg']
       },
+      install_requires=[
+            'xtermcolor',
+            'Pillow',
+      ],
       url='https://github.com/ChannelOne/plus1s',
       license='LGPL-3.0',
       )
