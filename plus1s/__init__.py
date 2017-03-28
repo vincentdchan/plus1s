@@ -4,7 +4,7 @@ from time import gmtime, strftime
 
 
 def plus1s():
-    print('You have devoted 1 second for him successfully!')
+    print('You have devoted 1 second to him successfully!')
     print()
     print('Time: ' + strftime('%Y-%m-%d %H:%M:%S', gmtime()))
     print()

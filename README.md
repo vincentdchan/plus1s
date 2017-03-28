@@ -38,7 +38,7 @@ Or type the command without parameter to devote a second.
 
 ```
 ➜  ~ plus1s
-You have devoted 1 second for him successfully!
+You have devoted 1 second to him successfully!
 
 Time: 2017-03-27 10:04:00
 
