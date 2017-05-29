@@ -3,7 +3,7 @@
 
 **Are you a real fans?**
 
-![the_elder.png](https://ooo.0o0.ooo/2017/03/28/58d93b9416075.png)
+![the_elder.png](http://blog.diverse.space/wp-content/uploads/2017/05/theElder.png)
 
 
 ## Installation:
